@@ -1,0 +1,141 @@
+/**
+* FONTS
+*/
+
+/*
+* Noto Serif */
+@font-face {
+  font-family: "Noto Serif";
+  src: url("./fonts/NotoSerif/NotoSerif-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Noto Serif";
+  src: url("./fonts/NotoSerif/NotoSerif-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Noto Serif";
+  src: url("./fonts/NotoSerif/NotoSerif-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Noto Serif";
+  src: url("./fonts/NotoSerif/NotoSerif-Bold.ttf");
+  font-weight: 700;
+}
+
+/*
+* Noto Sans */
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./fonts/NotoSans/NotoSans-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./fonts/NotoSans/NotoSans-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./fonts/NotoSans/NotoSans-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./fonts/NotoSans/NotoSans-Bold.ttf");
+  font-weight: 700;
+}
+
+/**
+* VARIABLES
+*/
+:root {
+  /*Global variables*/
+  --global-size__width--max: 1400px;
+  --global-size___width--min: 100%;
+  --global-font__default: "Noto Serif";
+  --global-font__alternate: "Noto Sans";
+  --global-border__default: 2px solid var(--color-border);
+  /*Colors*/
+  --color-border: #9dc3c3ff;
+  --color-bg: #f2f8f8ff;
+  --color-bg__hv: #d9e8e8ff;
+  --color-bg__act: #c3dadaff;
+  --color-accent: #2ca6bcff;
+  --color-accent__hv: #2792a5ff;
+  --color-accent__act: #228090ff;
+  --color-negative: #0f1c1cff;
+  --color-negative__hv: #192f2fff;
+  --color-negative__act: #294747ff;
+  --color-text: #0f1c1cff;
+  /*Sizes*/
+  --header-size__width: 100%;
+  --header-size__height: 78px;
+}
+
+/**
+* MAIN STYLES
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: var(--global-font__default), sans-serif;
+  color: var(--color-text);
+  font-size: 18px;
+}
+
+.brand {
+    font-family: var(--global-font__alternate);
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.text-alternate {
+    font-family: var(--global-font__alternate);
+}
+
+/**
+* HTML ELEMENTS
+*/
+.main {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.content {
+  width: var(--global-size___width--min);
+  max-width: var(--global-size__width--max);
+}
+
+/**
+* COMPONENTS
+*/
+
+/*Navbar*/
+.header {
+  width: var(--header-size__width);
+  height: var(--header-size__height);
+  background-color: var(--color-bg);
+  border-bottom: var(--global-border__default);
+  display: grid;
+  place-items: center;
+}
+
+.navbar {
+  width: var(--global-size___width--min);
+  max-width: var(--global-size__width--max);
+}
